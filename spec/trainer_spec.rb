@@ -2,11 +2,7 @@ require 'trainer'
 
 describe Trainer do
 
-  subject(:trainer) { described_class.new("Ben") }
-
-  it "initializes with a name" do
-    expect(trainer.name).to eq("Ben")
-  end
+  subject(:trainer) { described_class.new }
 
   it "initializes with a position" do
     expect(trainer.position).to include(0,0)

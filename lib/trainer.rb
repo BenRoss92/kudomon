@@ -1,9 +1,8 @@
 class Trainer
 
-  attr_reader :name, :position, :collection
+  attr_reader :position, :collection
 
-  def initialize(name, position = [0,0])
-    @name = name
+  def initialize(position = [0,0])
     @position = position
     @collection = Array.new(0)
   end
