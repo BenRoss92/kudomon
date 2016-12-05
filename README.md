@@ -26,7 +26,7 @@ Every Kudomon has a randomly generated position. The game allows a trainer to fi
 1) Open the command line and clone this repo:  
 `$ git clone git@github.com:BenRoss92/kudomon.git`
 
-2) Open IRB with the Game loaded:  
+2) Change into the `kudomon` directory and open IRB with the Game file loaded:  
  `$ irb -r './lib/game.rb'`
 
 3) Create a new Game and generate the Kudomon types:
