@@ -8,7 +8,8 @@ require './lib/kudomon_types/squirkle'
 
 class Game
 
-  attr_reader :trainer, :all_kudomon, :chikapu, :geoflude, :mancharred, :mewclue, :sourbulb, :squirkle
+  attr_reader :trainer, :all_kudomon, :chikapu, :geoflude, :mancharred,
+  :mewclue, :sourbulb, :squirkle, :nearby_kudomon
 
   def initialize(
     trainer: Trainer.new, chikapu: Chikapu.new, geoflude: Geoflude.new,
@@ -31,6 +32,10 @@ class Game
 
   def find_kudomon
     @nearby_kudomon = all_kudomon.select { |k| k.position.inject(:+) < 10 }
+  end
+
+  def catch_kudomon(index)
+    @trainer.collection << @nearby_kudomon.values_at(index - 1)[0]
   end
 
 end
